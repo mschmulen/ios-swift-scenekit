@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         // Create and configure the scene.
         myScene = MyScene()
         scnView.scene = myScene
+        scnView.showsStatistics = true
         
         // Create and configure the Lighting and Camera
         let diffuseLight = SCNLight()
@@ -53,6 +54,7 @@ class ViewController: UIViewController {
         myScene.rootNode.addChildNode(ambientLightNode)
         
         let camera = SCNCamera()
+        //camera.zNear = 0.01
         camera.xFov = 45
         camera.yFov = 45
         let cameraNode = SCNNode()
@@ -60,14 +62,61 @@ class ViewController: UIViewController {
         cameraNode.position = SCNVector3(x: 0, y: 0, z: 15)
         myScene.rootNode.addChildNode(cameraNode)
         
-        labelATitle.text = "Vertex count"
         
+        
+        // add a tap gesture recognizer
+        let tapGesture = UITapGestureRecognizer(target: self, action: "handleTap:")
+        let gestureRecognizers = NSMutableArray()
+        gestureRecognizers.addObject(tapGesture)
+        gestureRecognizers.addObjectsFromArray(scnView.gestureRecognizers)
+        scnView.gestureRecognizers = gestureRecognizers
+        
+        
+        
+        labelATitle.text = "Vertex count"
         updateHUD()
         
         //initialize the eventLoop
         //timer = CADisplayLink(target: self, selector: Selector("eventloop"))
         //timer.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode)
-
+        
+    }
+    
+    func handleTap(gestureRecognize: UIGestureRecognizer) {
+        
+        // retrieve the SCNView
+        let scnView = myView//self.view as SCNView
+        
+        // check what nodes are tapped
+        let p = gestureRecognize.locationInView(scnView)
+        let hitResults = scnView.hitTest(p, options: nil)
+        
+        // check that we touched on at least one object
+        if hitResults.count > 0 {
+            
+            let result: AnyObject! = hitResults[0]
+            let material = result.node!.geometry.firstMaterial
+            
+            // highlight animate it
+            SCNTransaction.begin()
+            SCNTransaction.setAnimationDuration(0.6)
+            
+            // on completion - unhighlight it
+            SCNTransaction.setCompletionBlock {
+                SCNTransaction.begin()
+                SCNTransaction.setAnimationDuration(1.1)
+                material.emission.contents = UIColor.blackColor()
+                SCNTransaction.commit()
+            }
+            material.emission.contents = UIColor.redColor()
+            SCNTransaction.commit()
+        }
+        
+    }
+    
+    func updateCameraToViewScene()
+    {
+        
     }
     
     func updateHUD() {

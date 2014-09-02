@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C932AA7319B574930000EC44 /* LegoBrick2_1withHole.dae in Resources */ = {isa = PBXBuildFile; fileRef = C932AA7219B574930000EC44 /* LegoBrick2_1withHole.dae */; };
+		C932AA7319B574930000EC44 /* LegoBrick.dae in Resources */ = {isa = PBXBuildFile; fileRef = C932AA7219B574930000EC44 /* LegoBrick.dae */; };
 		C9AB249819B53AA70061887E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB249719B53AA70061887E /* AppDelegate.swift */; };
 		C9AB249A19B53AA70061887E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB249919B53AA70061887E /* ViewController.swift */; };
 		C9AB249D19B53AA70061887E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AB249B19B53AA70061887E /* Main.storyboard */; };
@@ -27,7 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C932AA7219B574930000EC44 /* LegoBrick2_1withHole.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = LegoBrick2_1withHole.dae; path = "../../resources/gfx-models/LegoBrick2_1withHole.dae"; sourceTree = "<group>"; };
+		C932AA7219B574930000EC44 /* LegoBrick.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = LegoBrick.dae; path = "../../resources/gfx-models/LegoBrick.dae"; sourceTree = "<group>"; };
 		C9AB249219B53AA70061887E /* SceneKitA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneKitA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AB249619B53AA70061887E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9AB249719B53AA70061887E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,13 +79,13 @@
 		C9AB249419B53AA70061887E /* SceneKitA */ = {
 			isa = PBXGroup;
 			children = (
-				C932AA7219B574930000EC44 /* LegoBrick2_1withHole.dae */,
-				C9AB249719B53AA70061887E /* AppDelegate.swift */,
+				C9AB24B419B53FE50061887E /* MyScene.swift */,
 				C9AB249919B53AA70061887E /* ViewController.swift */,
+				C932AA7219B574930000EC44 /* LegoBrick.dae */,
+				C9AB249719B53AA70061887E /* AppDelegate.swift */,
 				C9AB249B19B53AA70061887E /* Main.storyboard */,
 				C9AB249E19B53AA70061887E /* Images.xcassets */,
 				C9AB249519B53AA70061887E /* Supporting Files */,
-				C9AB24B419B53FE50061887E /* MyScene.swift */,
 			);
 			path = SceneKitA;
 			sourceTree = "<group>";
@@ -197,7 +197,7 @@
 			files = (
 				C9AB249D19B53AA70061887E /* Main.storyboard in Resources */,
 				C9AB249F19B53AA70061887E /* Images.xcassets in Resources */,
-				C932AA7319B574930000EC44 /* LegoBrick2_1withHole.dae in Resources */,
+				C932AA7319B574930000EC44 /* LegoBrick.dae in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

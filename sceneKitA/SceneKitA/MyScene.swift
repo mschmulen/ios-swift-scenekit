@@ -28,12 +28,12 @@ class MyScene: SCNScene {
         
         totalVertexCount = 0;
         
+        //add some objects to the scene
         rootNode.addChildNode( loadCylinder() )
         rootNode.addChildNode ( loadSphere() )
         rootNode.addChildNode( loadBox())
         
-        rootNode.addChildNode( loadModelFile("LegoBrick2_1withHole.dae"))
-        
+        rootNode.addChildNode( loadModelFile("LegoBrick.dae"))
         
         totalVertexCount = traverseForGeometryCount( rootNode )
     }
