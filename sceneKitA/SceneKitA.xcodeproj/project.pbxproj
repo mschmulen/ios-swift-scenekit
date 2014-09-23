@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		C932AA7319B574930000EC44 /* LegoBrick.dae in Resources */ = {isa = PBXBuildFile; fileRef = C932AA7219B574930000EC44 /* LegoBrick.dae */; };
+		C9719E8119D1C06C0008AD49 /* ModelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9719E8019D1C06C0008AD49 /* ModelListViewController.swift */; };
+		C98A071E19BF7C9A00FD97FF /* SceneFactoryEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98A071D19BF7C9A00FD97FF /* SceneFactoryEnum.swift */; };
 		C9AB249819B53AA70061887E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB249719B53AA70061887E /* AppDelegate.swift */; };
 		C9AB249A19B53AA70061887E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB249919B53AA70061887E /* ViewController.swift */; };
 		C9AB249D19B53AA70061887E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AB249B19B53AA70061887E /* Main.storyboard */; };
 		C9AB249F19B53AA70061887E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AB249E19B53AA70061887E /* Images.xcassets */; };
 		C9AB24AB19B53AA70061887E /* SceneKitATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB24AA19B53AA70061887E /* SceneKitATests.swift */; };
-		C9AB24B519B53FE50061887E /* MyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB24B419B53FE50061887E /* MyScene.swift */; };
+		C9B28CF019B7972100AB7244 /* GlobeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B28CEC19B7972100AB7244 /* GlobeScene.swift */; };
+		C9B28CF119B7972100AB7244 /* GlobeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B28CEC19B7972100AB7244 /* GlobeScene.swift */; };
+		C9B28CF219B7972100AB7244 /* ModelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B28CED19B7972100AB7244 /* ModelTableViewController.swift */; };
+		C9B28CF319B7972100AB7244 /* ModelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B28CED19B7972100AB7244 /* ModelTableViewController.swift */; };
+		C9B28CF419B7972100AB7244 /* MoleculeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B28CEE19B7972100AB7244 /* MoleculeTableViewCell.swift */; };
+		C9B28CF519B7972100AB7244 /* MoleculeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B28CEE19B7972100AB7244 /* MoleculeTableViewCell.swift */; };
+		C9B28CF619B7972100AB7244 /* MyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B28CEF19B7972100AB7244 /* MyScene.swift */; };
+		C9B28CF719B7972100AB7244 /* MyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B28CEF19B7972100AB7244 /* MyScene.swift */; };
+		C9C9D46619BA9EC300DFB986 /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9D46519BA9EC300DFB986 /* SceneFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		C932AA7219B574930000EC44 /* LegoBrick.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = LegoBrick.dae; path = "../../resources/gfx-models/LegoBrick.dae"; sourceTree = "<group>"; };
+		C9719E8019D1C06C0008AD49 /* ModelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelListViewController.swift; sourceTree = "<group>"; };
+		C98A071D19BF7C9A00FD97FF /* SceneFactoryEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneFactoryEnum.swift; sourceTree = "<group>"; };
 		C9AB249219B53AA70061887E /* SceneKitA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneKitA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AB249619B53AA70061887E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9AB249719B53AA70061887E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +49,11 @@
 		C9AB24A419B53AA70061887E /* SceneKitATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SceneKitATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AB24A919B53AA70061887E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9AB24AA19B53AA70061887E /* SceneKitATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneKitATests.swift; sourceTree = "<group>"; };
-		C9AB24B419B53FE50061887E /* MyScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyScene.swift; sourceTree = "<group>"; };
+		C9B28CEC19B7972100AB7244 /* GlobeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobeScene.swift; sourceTree = "<group>"; };
+		C9B28CED19B7972100AB7244 /* ModelTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTableViewController.swift; sourceTree = "<group>"; };
+		C9B28CEE19B7972100AB7244 /* MoleculeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoleculeTableViewCell.swift; sourceTree = "<group>"; };
+		C9B28CEF19B7972100AB7244 /* MyScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyScene.swift; sourceTree = "<group>"; };
+		C9C9D46519BA9EC300DFB986 /* SceneFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +95,7 @@
 		C9AB249419B53AA70061887E /* SceneKitA */ = {
 			isa = PBXGroup;
 			children = (
-				C9AB24B419B53FE50061887E /* MyScene.swift */,
+				C9B28CEB19B7972100AB7244 /* common */,
 				C9AB249919B53AA70061887E /* ViewController.swift */,
 				C932AA7219B574930000EC44 /* LegoBrick.dae */,
 				C9AB249719B53AA70061887E /* AppDelegate.swift */,
@@ -113,6 +129,21 @@
 				C9AB24A919B53AA70061887E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9B28CEB19B7972100AB7244 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				C9719E8019D1C06C0008AD49 /* ModelListViewController.swift */,
+				C9B28CEC19B7972100AB7244 /* GlobeScene.swift */,
+				C9B28CED19B7972100AB7244 /* ModelTableViewController.swift */,
+				C9B28CEE19B7972100AB7244 /* MoleculeTableViewCell.swift */,
+				C9B28CEF19B7972100AB7244 /* MyScene.swift */,
+				C9C9D46519BA9EC300DFB986 /* SceneFactory.swift */,
+				C98A071D19BF7C9A00FD97FF /* SceneFactoryEnum.swift */,
+			);
+			name = common;
+			path = ../../common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,8 +247,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9AB249A19B53AA70061887E /* ViewController.swift in Sources */,
+				C9B28CF419B7972100AB7244 /* MoleculeTableViewCell.swift in Sources */,
+				C9C9D46619BA9EC300DFB986 /* SceneFactory.swift in Sources */,
+				C9719E8119D1C06C0008AD49 /* ModelListViewController.swift in Sources */,
+				C9B28CF619B7972100AB7244 /* MyScene.swift in Sources */,
+				C98A071E19BF7C9A00FD97FF /* SceneFactoryEnum.swift in Sources */,
+				C9B28CF219B7972100AB7244 /* ModelTableViewController.swift in Sources */,
+				C9B28CF019B7972100AB7244 /* GlobeScene.swift in Sources */,
 				C9AB249819B53AA70061887E /* AppDelegate.swift in Sources */,
-				C9AB24B519B53FE50061887E /* MyScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +262,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B28CF119B7972100AB7244 /* GlobeScene.swift in Sources */,
+				C9B28CF319B7972100AB7244 /* ModelTableViewController.swift in Sources */,
+				C9B28CF719B7972100AB7244 /* MyScene.swift in Sources */,
 				C9AB24AB19B53AA70061887E /* SceneKitATests.swift in Sources */,
+				C9B28CF519B7972100AB7244 /* MoleculeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,6 +24,15 @@ class ViewController: UIViewController {
     
     var timer: CADisplayLink! = nil
     
+    var currentScene = 0
+    
+    
+    @IBAction func actionButtonA(sender: AnyObject) {
+        
+        println("Action Button A - Cycle through different models")
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,11 +40,13 @@ class ViewController: UIViewController {
         let scnView = myView//view as SCNView
         scnView.autoenablesDefaultLighting = true
         scnView.backgroundColor = UIColor.lightGrayColor()
+        //scnView.backgroundColor = UIColor.blackColor()
+        scnView.allowsCameraControl = true
+        scnView.showsStatistics = true
         
         // Create and configure the scene.
         myScene = MyScene()
         scnView.scene = myScene
-        scnView.showsStatistics = true
         
         // Create and configure the Lighting and Camera
         let diffuseLight = SCNLight()
@@ -62,16 +73,14 @@ class ViewController: UIViewController {
         cameraNode.position = SCNVector3(x: 0, y: 0, z: 15)
         myScene.rootNode.addChildNode(cameraNode)
         
-        
-        
         // add a tap gesture recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: "handleTap:")
         let gestureRecognizers = NSMutableArray()
         gestureRecognizers.addObject(tapGesture)
-        gestureRecognizers.addObjectsFromArray(scnView.gestureRecognizers)
+        
+        //MAS TODO
+        gestureRecognizers.addObjectsFromArray(scnView.gestureRecognizers!)
         scnView.gestureRecognizers = gestureRecognizers
-        
-        
         
         labelATitle.text = "Vertex count"
         updateHUD()
@@ -84,6 +93,8 @@ class ViewController: UIViewController {
     
     func handleTap(gestureRecognize: UIGestureRecognizer) {
         
+        println("handle Tap")
+        
         // retrieve the SCNView
         let scnView = myView//self.view as SCNView
         
@@ -92,10 +103,13 @@ class ViewController: UIViewController {
         let hitResults = scnView.hitTest(p, options: nil)
         
         // check that we touched on at least one object
-        if hitResults.count > 0 {
+        if hitResults!.count > 0 {
             
-            let result: AnyObject! = hitResults[0]
-            let material = result.node!.geometry.firstMaterial
+            // let result: AnyObject! = hitResults[0]
+            // let material = result.node!.geometry.firstMaterial
+            
+            let result = hitResults?[0]
+            let material = result?.node.geometry?.firstMaterial
             
             // highlight animate it
             SCNTransaction.begin()
@@ -105,13 +119,17 @@ class ViewController: UIViewController {
             SCNTransaction.setCompletionBlock {
                 SCNTransaction.begin()
                 SCNTransaction.setAnimationDuration(1.1)
-                material.emission.contents = UIColor.blackColor()
+                //material.emission.contents = UIColor.blackColor()
+                material?.emission.contents = UIColor.blackColor()
                 SCNTransaction.commit()
             }
-            material.emission.contents = UIColor.redColor()
+            
+            //material.emission.contents = UIColor.redColor()
+            material?.emission.contents = UIColor.redColor()
             SCNTransaction.commit()
+            
         }
-        
+
     }
     
     func updateCameraToViewScene()
@@ -122,7 +140,21 @@ class ViewController: UIViewController {
     func updateHUD() {
         labelA.text = "\(myScene.getVertCount())"
     }
-
+    
+    /*
+    override func shouldAutorotate() -> Bool {
+        return true
+    }
+    
+    override func supportedInterfaceOrientations() -> Int {
+        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
+            return Int(UIInterfaceOrientationMask.AllButUpsideDown.toRaw())
+        } else {
+            return Int(UIInterfaceOrientationMask.All.toRaw())
+        }
+    }
+    */
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

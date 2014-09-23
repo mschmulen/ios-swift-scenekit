@@ -11,13 +11,30 @@ secret.md
 #########
 build/*
 *.pbxuser
+!default.pbxuser
 *.mode2v3
+!default.mode2v3
 *.mode1v3
+*.perspectivev3
+!default.perspectivev3
 *.xcworkspace
 xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+
 *.lock
 *.swp
 *.out
+
+#############
+# CocoaPods #
+#############
+# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
+# Pods/
 
 ######################
 # Logs and databases #
