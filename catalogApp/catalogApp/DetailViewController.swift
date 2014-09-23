@@ -9,7 +9,15 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
+    @IBAction func actionDismiss(sender: AnyObject) {
+        
+        self.dismissViewControllerAnimated( true, completion: { () -> Void in
+            
+            println("view dismissed")
+            
+        })
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

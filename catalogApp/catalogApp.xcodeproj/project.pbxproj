@@ -13,6 +13,12 @@
 		C9B28D0E19B797C000AB7244 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9B28D0C19B797C000AB7244 /* Main.storyboard */; };
 		C9B28D1019B797C000AB7244 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9B28D0F19B797C000AB7244 /* Images.xcassets */; };
 		C9B28D1C19B797C000AB7244 /* catalogAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B28D1B19B797C000AB7244 /* catalogAppTests.swift */; };
+		C9B28D2A19B797E700AB7244 /* GlobeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B28D2619B797E700AB7244 /* GlobeScene.swift */; };
+		C9B28D2B19B797E700AB7244 /* ModelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B28D2719B797E700AB7244 /* ModelTableViewController.swift */; };
+		C9B28D2C19B797E700AB7244 /* MoleculeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B28D2819B797E700AB7244 /* MoleculeTableViewCell.swift */; };
+		C9B28D2D19B797E700AB7244 /* MyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B28D2919B797E700AB7244 /* MyScene.swift */; };
+		C9B28D2F19B79CDD00AB7244 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B28D2E19B79CDD00AB7244 /* SceneViewController.swift */; };
+		C9C9D46419BA9D9C00DFB986 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9D46319BA9D9C00DFB986 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,12 @@
 		C9B28D1519B797C000AB7244 /* catalogAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = catalogAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B28D1A19B797C000AB7244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9B28D1B19B797C000AB7244 /* catalogAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = catalogAppTests.swift; sourceTree = "<group>"; };
+		C9B28D2619B797E700AB7244 /* GlobeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobeScene.swift; sourceTree = "<group>"; };
+		C9B28D2719B797E700AB7244 /* ModelTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTableViewController.swift; sourceTree = "<group>"; };
+		C9B28D2819B797E700AB7244 /* MoleculeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoleculeTableViewCell.swift; sourceTree = "<group>"; };
+		C9B28D2919B797E700AB7244 /* MyScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyScene.swift; sourceTree = "<group>"; };
+		C9B28D2E19B79CDD00AB7244 /* SceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneViewController.swift; path = ../../common/SceneViewController.swift; sourceTree = "<group>"; };
+		C9C9D46319BA9D9C00DFB986 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +89,15 @@
 		C9B28D0319B797C000AB7244 /* catalogApp */ = {
 			isa = PBXGroup;
 			children = (
+				C9B28D2519B797E700AB7244 /* common */,
 				C9B28D0619B797C000AB7244 /* AppDelegate.swift */,
 				C9B28D0819B797C000AB7244 /* FirstViewController.swift */,
 				C9B28D0A19B797C000AB7244 /* SecondViewController.swift */,
 				C9B28D0C19B797C000AB7244 /* Main.storyboard */,
 				C9B28D0F19B797C000AB7244 /* Images.xcassets */,
 				C9B28D0419B797C000AB7244 /* Supporting Files */,
+				C9B28D2E19B79CDD00AB7244 /* SceneViewController.swift */,
+				C9C9D46319BA9D9C00DFB986 /* DetailViewController.swift */,
 			);
 			path = catalogApp;
 			sourceTree = "<group>";
@@ -110,6 +125,18 @@
 				C9B28D1A19B797C000AB7244 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9B28D2519B797E700AB7244 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				C9B28D2619B797E700AB7244 /* GlobeScene.swift */,
+				C9B28D2719B797E700AB7244 /* ModelTableViewController.swift */,
+				C9B28D2819B797E700AB7244 /* MoleculeTableViewCell.swift */,
+				C9B28D2919B797E700AB7244 /* MyScene.swift */,
+			);
+			name = common;
+			path = ../../common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,8 +238,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C9D46419BA9D9C00DFB986 /* DetailViewController.swift in Sources */,
 				C9B28D0B19B797C000AB7244 /* SecondViewController.swift in Sources */,
+				C9B28D2F19B79CDD00AB7244 /* SceneViewController.swift in Sources */,
 				C9B28D0719B797C000AB7244 /* AppDelegate.swift in Sources */,
+				C9B28D2A19B797E700AB7244 /* GlobeScene.swift in Sources */,
+				C9B28D2C19B797E700AB7244 /* MoleculeTableViewCell.swift in Sources */,
+				C9B28D2B19B797E700AB7244 /* ModelTableViewController.swift in Sources */,
+				C9B28D2D19B797E700AB7244 /* MyScene.swift in Sources */,
 				C9B28D0919B797C000AB7244 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +434,7 @@
 				C9B28D2119B797C000AB7244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9B28D2219B797C000AB7244 /* Build configuration list for PBXNativeTarget "catalogAppTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +443,7 @@
 				C9B28D2419B797C000AB7244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
